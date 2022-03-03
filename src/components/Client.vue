@@ -50,6 +50,7 @@
 import moment from 'moment';
 
 export default {
+    name: 'Client',
     props: {
         client: { type: Object, required: true }
     },

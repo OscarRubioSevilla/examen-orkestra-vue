@@ -22,21 +22,18 @@
 import "tui-pagination/dist/tui-pagination.min.css";
 import "./scss/main.scss";
 import Buscador from "./components/Buscador.vue";
-import Main from "./components/Main.vue";
 import Client from "./components/Client.vue";
 import { mapActions, mapState } from "vuex";
-import Pagination from "tui-pagination"; /* ES6 */
+import Pagination from "tui-pagination";
 
 export default {
   name: "App",
   components: {
     Buscador,
-    Main,
     Client,
   },
   data() {
     return {
-      textErased: true,
       pagination: null,
       pagination2: null,
     };
@@ -69,10 +66,7 @@ export default {
   
         this.pagination.on("afterMove", this.syncPagination1);
         this.pagination2.on("afterMove", this.syncPagination2);
-      } else {
-        console.log('No se debe paginar')
       }
-
     },
     syncPagination1({ page }) {
       if (this.pagination2.getCurrentPage() !== page) {

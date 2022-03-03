@@ -13,7 +13,7 @@
 <script>
 import { mapActions, mapMutations } from 'vuex'
 export default {
-  name: 'Main',
+  name: 'Buscador',
   data() {
       return {
           args: {
