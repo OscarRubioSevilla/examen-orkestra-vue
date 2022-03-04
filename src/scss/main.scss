@@ -204,3 +204,16 @@ p {
     background: #337AB7;
     border-color: #337AB7;
 }
+
+@media (max-width: 767px) {
+    .search {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 575px) {
+    .client-info__row {
+        gap: 0;
+        flex-direction: column;
+    }
+}
